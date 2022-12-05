@@ -1,0 +1,26 @@
+<h1 class="text-center">Cabs</h1>
+<div class="container">
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Cab</th>
+            <th>Cab Model</th>
+            <th>Cab Capacity</th>
+            <th>Action</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td style="width: 40%;">
+                <img src="https://th.bing.com/th/id/R.5193b1978b5bd985db4b1d75c7238eec?rik=Jr8QhAa95k1nTw&riu=http%3a%2f%2fwww.articles4all.org%2fwp-content%2fuploads%2f2012%2f04%2f5650631_l.jpg&ehk=IyImykxtcgkK5CYlY%2bsIE8Sn2Vmw6D2LQvuYUZmxUDE%3d&risl=&pid=ImgRaw&r=0"
+                    width="40%" height="40%">
+            </td>
+            <td>{{this.dataValues.cabmodel}}</td>
+            <td>{{this.dataValues.cabcapacity}}</td>
+            <td>
+                <a href="/cab/details/{{this.dataValues.id}}" class="btn btn-primary">View More Details</a>
+            </td>
+
+
+        </tr>
+        {{/each}}
+    </table>
+</div>

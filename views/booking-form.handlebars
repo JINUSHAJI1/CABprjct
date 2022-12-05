@@ -1,0 +1,83 @@
+<div class="container">
+    <h1 class="text-center">Book Your CAB</h1>
+    <h2 class="text-left" style="font-family: Gabriola;">CAB : {{data.dataValues.cabnumber}}</h2>
+    <div>
+        <form method="post">
+
+            <div class="row">
+                <div class="col">
+                    <label for="start">Source</label>
+                    <select class="form-select" name="start" style="border-color:rgb(44, 156, 204) ;width:60%;">
+                        <option></option>
+                        {{#each data}}
+                        <option value="{{this.dataValues.start}}">{{this.dataValues.start}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+                <div class="col"><label for="end">Destination</label>
+                    <select class="form-select" name="start" style="border-color:rgb(44, 156, 204) ;width:60%;">
+                        <option></option>
+                        {{#each data}}
+                        <option value="{{this.dataValues.end}}">{{this.dataValues.end}}</option>
+                        {{/each}}
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="date">Date</label>
+                    <input type="date" name="date" id="date" class="form-control"
+                        style="border-color:rgb(44, 156, 204) ;width:60%;">
+                </div>
+                <div class="col">
+                    <label for="time">Pickup Time</label>
+                    <input type="time" name="time" id="time" class="form-control"
+                        style="border-color:rgb(44, 156, 204) ;width:60%;">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="paddress">PickUp Address</label>
+                    <textarea name="paddress" id="paddress" class="form-control"
+                        style="height: 10vh;border-radius:12px;border-color:rgb(22, 73, 112);width:60%;">
+                    </textarea>
+                </div>
+                <div class="col">
+                    <label for="daddress">DropOff Address</label>
+                    <textarea name="daddress" id="daddress" class="form-control"
+                        style="height: 10vh;border-radius:12px;border-color:rgb(22, 73, 112);width:60%;">
+                    </textarea>
+                </div>
+            </div>
+
+            <br>
+            <div>
+                <h5>Traveller Details</h5>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-control"
+                        style="border-color:rgb(44, 156, 204);width:60%;">
+                </div>
+                <div class="col">
+                    <label for="mobile">Conatct Number</label>
+                    <input type="number" name="cabcapacity" id="cabcapacity" class="form-control"
+                        style="border-color:rgb(44, 156, 204);width:60%;">
+                </div>
+            </div>
+
+
+            <div>
+                <label for="passengersno">Number of passengers</label>
+                <input type="number" name="passengersno" id="passengersno" class="form-control"
+                    style="border-color:rgb(44, 156, 204);width:29%;">
+            </div>
+            <div class="d-grid mt-4">
+
+                <button class="btn" style="background-color:rgb(19, 116, 155);width:40%;">Book</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>

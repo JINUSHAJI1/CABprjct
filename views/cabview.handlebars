@@ -1,0 +1,26 @@
+<h1 class="text-center">Cabs</h1>
+<div class="container">
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>Driver Name</th>
+            <th>Driver Contact Number</th>
+            <th>Driver Email</th>
+            <th>Driver Licence Number</th>
+            <th>Vehicle Number</th>
+            <th>Year</th>
+            <th>Cab Capacity</th>
+        </tr>
+        {{#each data}}
+        <tr>
+            <td>{{this.dataValues.drivername}}</td>
+            <td>{{this.dataValues.drivercontact}}</td>
+            <td>{{this.dataValues.driveremail}}</td>
+            <td>{{this.dataValues.licencenumber}}</td>
+            <td>{{this.dataValues.cabnumber}}</td>
+            <td>{{this.dataValues.myear}}</td>
+            <td>{{this.dataValues.cabcapacity}}</td>
+
+        </tr>
+        {{/each}}
+    </table>
+</div>

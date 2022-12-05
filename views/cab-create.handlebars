@@ -1,0 +1,79 @@
+<div class="container">
+    <h1 class="text-center">Driver Registration</h1>
+    <div>
+        <div>
+            <form method="post">
+                <div>
+                    <label for="drivername">Driver Name</label>
+                    <input type="text" name="drivername" id="drivername" class="form-control"
+                        style="border-color:rgb(44, 156, 204) ;">
+                </div>
+                <div>
+                    <label for="drivercontact">Driver Contact Number</label>
+                    <input type="number" name="drivercontact" id="drivercontact" class="form-control"
+                        style="border-color:rgb(44, 156, 204);">
+                </div>
+                <div>
+                    <label for="driveremail">Driver Email</label>
+                    <input type="text" name="driveremail" id="driveremail" class="form-control"
+                        style="border-color:rgb(44, 156, 204) ;">
+                </div>
+                <div>
+                    <label for="licencenumber">Driver Licence Number</label>
+                    <input type="text" name="licencenumber" id="licencenumber" class="form-control"
+                        style="border-color:rgb(44, 156, 204) ;">
+                </div>
+
+                <div>
+                    <label for="cabnumber">Vehicle Number</label>
+                    <input type="text" name="cabnumber" id="cabnumber" class="form-control"
+                        style="border-color:rgb(44, 156, 204);">
+                </div>
+                <div>
+                    <label for="myear">Vehicle Manufacture Year</label>
+                    <input type="Date" name="myear" id="myear" class="form-control"
+                        style="border-color:rgb(44, 156, 204);">
+                </div>
+                <div>
+                    <label for="myear">Cab Model</label>
+                    <select class="form-select" name="cabmodel" aria-label="Default select example">
+
+                        <option></option>
+
+                        <option value="car">car</option>
+
+                        <option value="van">van</option>
+                        <option value="cabvan">cabvan</option>
+
+                    </select>
+                </div>
+
+                <div>
+                    <label for="cabcapacity">Cab Capacity</label>
+                    <input type="number" name="cabcapacity" id="cabcapacity" class="form-control"
+                        style="border-color:rgb(44, 156, 204); ;">
+                </div>
+
+                {{!-- <div>
+                    <label for="cabimage">Cab Image</label>
+                    <input type="image" name="cabcapacity" id="cabcapacity" class="form-control"
+                        style="border-color:rgb(44, 156, 204); ;">
+                </div> --}}
+                <div>
+                    <label for="password">Password</label>
+                    <input type="text" name="password" id="password" class="form-control"
+                        style="border-color:rgb(44, 156, 204); ;">
+                </div>
+                <div>
+                    <label for="cpassword">Confirm Password</label>
+                    <input type="text" name="cpassword" id="cpassword" class="form-control"
+                        style="border-color:rgb(44, 156, 204); ;">
+                </div>
+
+                <div class="d-grid mt-4">
+                    <button class="btn" style="background-color:rgb(19, 116, 155);">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
