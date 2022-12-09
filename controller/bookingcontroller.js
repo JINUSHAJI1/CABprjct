@@ -22,33 +22,46 @@ module.exports.create = async (req, res, next) => {
 }
 
 module.exports.createPost = (req, res, next) => {
-    console.log("hlo");
+    cab.findByPk(req.params.cabnumber).then((data) => {
 
-    
-
+        place.findOne(
+            {
+                where: {
+                    start: req.body.start,
+                    end: req.body.end
+                }
+            }
+        ).then((paymentDetails)=>{
     booking.create({
-        bid: req.body.bid,
-        pid: req.body.pid,
-        cid:req.body.cid,
-        uid: req.session.userId,
+        id: req.body.id,
         date: req.body.date,
-        time: req.body.time,
+        time:req.body.time,
+        start:req.body.start,
+        end:req.body.end,
         paddress: req.body.paddress,
         daddress: req.body.daddress,
+        user_id: req.session.userId,
+        cab_id: req.params.id,
+        cabnumber: req.body.cabnumber,
         pname: req.body.pname,
         contactnumber: req.body.contactnumber,
         passengersno: req.body.passengersno,
+        rate:paymentDetails.rate
     })
-        .then(user => {
-            res.redirect("/cab/bookview/"+user.bid);
+        .then(booking => {
+            console.log();
+            // res.redirect("/cab/bookview/"+booking.id);
+            res.redirect("/cab/bookview/"+booking.id);
         })
+})
+})
+
 }
 
-
 module.exports.bookview = (req, res, next) => {
-    console.log(req.params.bid);
+    console.log(req.params.id);
     
-    booking.findByPk(req.params.bid)
+    booking.findByPk(req.params.id)
         .then(bookings => {
             console.log(bookings);
             res.render('bookview', {
@@ -58,15 +71,49 @@ module.exports.bookview = (req, res, next) => {
             })
         });
 
+
+    
+
 }
+
+
+
+
 module.exports.payment = (req, res, next) => {
-    res.render('payment');
+    console.log('11111111111111111111111111111')
+    console.log(req.params.id)
+    booking.findByPk(req.params.id)
+    .then(bookings => {
+        console.log(bookings);
+        res.render('pdf', {
+            data: bookings
+
+
+        })
+    });
+
 }
 module.exports.paymentsuccess = (req, res, next) => {
-    res.render('successpdf');
+    booking.findByPk(req.params.id)
+    .then(bookings => {
+        console.log(bookings);
+        res.render('successpdf', {
+            data: bookings
+
+
+        })
+    });
 }
 module.exports.pdf = (req, res, next) => {
-    res.render('pdf');
+    booking.findByPk(req.params.id)
+    .then(bookings => {
+        console.log(bookings);
+        res.render('pdf', {
+            data: bookings
+
+
+        })
+    });
 }
 
 

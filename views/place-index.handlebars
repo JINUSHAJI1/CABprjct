@@ -1,0 +1,22 @@
+<h1 class="text-center">Routes</h1>
+<div class="container">
+    <a href="/admin/add/routes" class="btn btn-primary">+ Add New Routes</a>
+    <table class="table table-striped mt-4">
+        <tr>
+            <th>START</th>
+            <th>STOP</th>
+            <th>RATE</th>
+        </tr>
+        {{#each data}}
+        <tr>
+             <td>{{this.dataValues.start}}</td>
+            <td>{{this.dataValues.end}}</td>
+            <td>{{this.dataValues.rate}}</td>
+            <td>
+                <a href="/admin/place/update/{{this.dataValues.id}}">Edit</a> |
+                <a href="/admin/place/delete/{{this.dataValues.id}}" class="text-danger" onclick="return confirm('Are you sure you want to delete this')">Delete</a>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>

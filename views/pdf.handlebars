@@ -1,19 +1,102 @@
-<h1 class="text-center">Booking Deatils</h1>
+<div class="card-header">
+    <h4 class="card-title" id="card" style="text-align: center;">Thank For Your Booking</h4>
+  </div>
 <div class="container">
-    <table class="table table-striped mt-4">
-        Traveller name  :  {{data.dataValues.bid}} <br><br>
-        Contact number: {{data.dataValues.contactnumber}}<br><br>
-        Total number of passengers : {{data.dataValues.passengersno}}<br><br>
-        Cab Number : {{data.dataValues.cabnumber}}<br><br>
-        Source  : {{data.dataValues.start}}<br><br>
-        Destination : {{data.dataValues.end}}<br><br>
-        Pickup date : {{data.dataValues.date}}<br><br>
-        Pickup time : {{data.dataValues.time}}<br><br>
-        Pickup address : {{data.dataValues.paddress}}<br><br>
-        Drpoff address : {{data.dataValues.daddress}}<br><br>
+    <div style="border:1px solid rgba(6, 108, 129, 0.593);width:60%;padding:20px;position:absolute;right:20%">
+    <table class="table table-striped mt-4" >
+ <tbody>
 
+        <tr>
+
+            <th>Traveller name  </th>
+
+            <td>{{data.dataValues.pname}}</td>
+
+        </tr>
+        <tr>
+
+            <th>Contact number </th>
+
+            <td>{{data.dataValues.contactnumber}}</td>
+
+        </tr>
+        <tr>
+
+            <th>Total number of passengers  </th>
+
+            <td>{{data.dataValues.passengersno}}</td>
+
+        </tr>
+       <tr>
+
+            <th>Cab Number </th>
+
+            <td> {{data.dataValues.cabnumber}}</td>
+
+        </tr>
+        <tr>
+
+            <th>Source </th>
+
+            <td>  {{data.dataValues.start}}</td>
+
+        </tr>
+       <tr>
+
+            <th>Destination</th>
+
+            <td>{{data.dataValues.end}}</td>
+
+        </tr>
+         <tr>
+
+            <th>Pickup date </th>
+
+            <td>{{data.dataValues.date}}</td>
+
+        </tr>
+         <tr>
+
+            <th>Pickup time</th>
+
+            <td>{{data.dataValues.time}}</td>
+
+        </tr>
+         <tr>
+
+            <th>Pickup address</th>
+
+            <td>{{data.dataValues.paddress}}</td>
+
+        </tr>
+         <tr>
+
+            <th>Drpoff address</th>
+
+            <td>{{data.dataValues.daddress}}</td>
+
+        </tr>
+         <tr>
+
+            <th>Paid Rate</th>
+
+            <td>{{data.dataValues.rate}}</td>
+
+        </tr>
         
+        </div>
     </table>
+    <div style="position: absolute;right:50%;top:93%">
+    <button class="btn btn-outline-success" id="printpdf" onclick="printpdf()">Print pdf</button></div>
+    <script>
+    const btn = document.getElementById('printpdf')
+    const card = document.getElementById('card')
+    function printpdf(){
+        btn.style.display = 'none'
+        card.style.display = 'none'
+        return window.print()
+    }
+</script>
 
     
 </div>

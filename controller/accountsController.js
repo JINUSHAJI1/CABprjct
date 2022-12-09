@@ -16,6 +16,11 @@ module.exports.loginPost = async (req, res, next) => {
     if (userFromDb == null) {
         return res.render('login', { message: 'No user with this email or password was found.' })
     }
+    else if (email == "admin@mail.com" && password == "admin") {
+
+        return res.render('admin-home')
+
+    }
 
     req.session.userId = userFromDb.id;
     res.redirect('/userhome');
@@ -45,6 +50,14 @@ module.exports.registerPost = async (req, res, next) => {
     });
 
     res.redirect('/login');
+}
+
+module.exports.logout = (req, res, next)=>{
+
+    req.session.id = null;
+
+    return res.redirect('/login');
+
 }
 
 

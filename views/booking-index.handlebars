@@ -76,34 +76,41 @@ body {
   <a href="/admin/cab">CAB Deatails</a>
   <a href="/admin/user">USER Details</a>
   <a href="/admin/booking">BOOKING Details</a>
-
- 
+  <a href="/admin/booking">Logout</a>
+  
 </div>
 
-
-<h1 class="text-center">Drivers</h1>
+<h1 class="text-center">Bookings</h1>
 <div class="container">
+    <form method="post">
+        <label>date</label>
+  <input type="date" name="date" >
+  <button type="submit">seacrh</button>
+    </form>
+
+{{#if found}}
+<div class="alert" role="alert">No Booking found</div>
+{{/if}}
     <table class="table table-striped mt-4" style="width: 80%;">
         <tr>
-            <th>Driver Name</th>
-            <th>Driver Contact Number</th>
-            <th>Driver Email</th>
-            <th>Driver Licence Number</th>
-            <th>Vehicle Number</th>
-            <th>Cab Model</th>
-            <th>Year</th>
-            <th>Cab Capacity</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Cab</th>
+            <th>Passenger</th>
+            <th>PickUp</th>
+            <th>Dropoff</th>
+            
         </tr>
         {{#each data}}
         <tr>
-            <td>{{this.dataValues.drivername}}</td>
-            <td>{{this.dataValues.drivercontact}}</td>
-            <td>{{this.dataValues.driveremail}}</td>
-            <td>{{this.dataValues.licencenumber}}</td>
+            <td>{{this.dataValues.date}}</td>
+            <td>{{this.dataValues.time}}</td>
             <td>{{this.dataValues.cabnumber}}</td>
-            <td>{{this.dataValues.cabmodel}}</td>
-            <td>{{this.dataValues.myear}}</td>
-            <td>{{this.dataValues.cabcapacity}}</td>
+            <td>{{this.dataValues.pname}}</td>
+            <td>{{this.dataValues.start}}</td>
+            <td>{{this.dataValues.end}}</td>
+            <td class="btn">Approved</td>
+           
 
         </tr>
         {{/each}}

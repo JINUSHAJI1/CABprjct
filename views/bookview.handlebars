@@ -1,7 +1,8 @@
+
 <h1 class="text-center">Booking Deatils</h1>
 <div class="container">
     <table class="table table-striped mt-4">
-        Traveller name  :  {{data.dataValues.bid}} <br><br>
+        Traveller name  :  {{data.dataValues.pname}} <br><br>
         Contact number: {{data.dataValues.contactnumber}}<br><br>
         Total number of passengers : {{data.dataValues.passengersno}}<br><br>
         Cab Number : {{data.dataValues.cabnumber}}<br><br>
@@ -18,10 +19,10 @@
     <div style="position: absolute;top:30%;right:30%;color:rgb(15, 86, 141);border:2px solid rgb(6, 76, 114);width:20%;text-align:center;background-color:rgba(15, 79, 128, 0.431)">
        <table border="2px" >
         <h2>Total Price</h2>
-        <h3>₹3000</h3>
+        <h3>₹{{data.dataValues.rate}}</h3>
        </table>
         <td>
-            <a href="/cab/payment" class="btn"
+            <a href="/cab/payment/{{data.dataValues.id}}" class="btn"
                 style="background-color: rgba(217, 92, 20, 0.837);width:40%">Pay</a>
         </td><br><br>
     </div>

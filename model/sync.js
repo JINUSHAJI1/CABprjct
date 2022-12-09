@@ -3,21 +3,18 @@ const cab = require('./cab');
 const place = require('./place');
 const booking = require('./booking');
 
+cab.hasMany(booking, {foreignKey:'cab_id'});
+booking.belongsTo(cab,{
+    foreignKey: 'cab_id'
+});
+ 
 
-place.hasMany(booking, {foreignKey:'pid'});
-user.hasMany(booking, {foreignKey:'uid'});
-cab.hasMany(booking, {foreignKey:'cid'});
 
-// booking.belongsTo(place, {
+user.hasMany(booking,{foreignKey: 'user_id'});
+booking.belongsTo(user, {
+    foreignKey: 'user_id'
+});
 
-//     foreignKey:'id'
-
-// });
-
-// place.hasMany(booking)
-// booking.belongsTo(place, {
-//     foreignKey:{name : "pid", field : "id", allowNull: true}
-// });
 
 
 user.sync({alter: true});

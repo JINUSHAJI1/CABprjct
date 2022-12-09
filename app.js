@@ -4,6 +4,7 @@ const offerRoutes = require('./routes/offerRoutes');
 const cabRoutes = require('./routes/cabRoutes');
 const accountRoutes = require('./routes/accountsRoutes');
 const bookingRoutes = require('./routes/bookingRoutes');
+const adminRoutes = require('./routes/adminRoutes');
 const path = require('path');
 const cookieSession = require('cookie-session');
 const { engine } = require('express-handlebars');
@@ -31,6 +32,7 @@ app.use(accountRoutes);
 app.use(offerRoutes);
 app.use(cabRoutes);
 app.use(bookingRoutes);
+app.use(adminRoutes);
 
 
 

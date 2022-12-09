@@ -1,3 +1,4 @@
+
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -76,34 +77,28 @@ body {
   <a href="/admin/cab">CAB Deatails</a>
   <a href="/admin/user">USER Details</a>
   <a href="/admin/booking">BOOKING Details</a>
-
+  
  
 </div>
-
-
-<h1 class="text-center">Drivers</h1>
+<h1 class="text-center">Passengers</h1>
 <div class="container">
-    <table class="table table-striped mt-4" style="width: 80%;">
+    <table class="table table-striped mt-4"style="width: 80%;">
         <tr>
-            <th>Driver Name</th>
-            <th>Driver Contact Number</th>
-            <th>Driver Email</th>
-            <th>Driver Licence Number</th>
-            <th>Vehicle Number</th>
-            <th>Cab Model</th>
-            <th>Year</th>
-            <th>Cab Capacity</th>
+            <th>Passenger Name</th>
+            <th>Passenger Contact Number</th>
+            <th>Passenger Email</th>
+            <th>Passenger address</th>
+            <th>DOB</th>
+            <th>Gender</th>
         </tr>
         {{#each data}}
         <tr>
-            <td>{{this.dataValues.drivername}}</td>
-            <td>{{this.dataValues.drivercontact}}</td>
-            <td>{{this.dataValues.driveremail}}</td>
-            <td>{{this.dataValues.licencenumber}}</td>
-            <td>{{this.dataValues.cabnumber}}</td>
-            <td>{{this.dataValues.cabmodel}}</td>
-            <td>{{this.dataValues.myear}}</td>
-            <td>{{this.dataValues.cabcapacity}}</td>
+            <td>{{this.dataValues.name}}</td>
+            <td>{{this.dataValues.mobile}}</td>
+            <td>{{this.dataValues.email}}</td>
+            <td>{{this.dataValues.address}}</td>
+            <td>{{this.dataValues.dob}}</td>
+            <td>{{this.dataValues.gender}}</td>
 
         </tr>
         {{/each}}

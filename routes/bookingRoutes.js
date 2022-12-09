@@ -5,9 +5,10 @@ const router = express.Router();
 
 router.get('/booking/add/:id', controller.create);
 router.post('/booking/add/:id', controller.createPost);
-router.get('/cab/bookview/:bid', controller.bookview);
-router.get('/cab/payment', controller.payment);
-router.get('/cab/payment/success', controller.paymentsuccess);
+
+router.get('/cab/bookview/:id', controller.bookview);
+router.get('/cab/payment/:id', controller.payment);
+router.get('/cab/payment/success/:id', controller.paymentsuccess);
 router.get('/cab/payment/successpdf', controller.pdf);
 
 

@@ -1,12 +1,36 @@
-<br><br>
-<div class="container">
+<li class="btn" style="position:absolute ;right:1%;background-color:rgb(8, 127, 163);color:aliceblue">
+                    <a class="nav-link" href="/logout">Logout</a>
+                </li>
 
-    <h2>
-        <p class="text-center">WELCOME
-            <b>{{identity.name}} </b>
-    </h2>
-    </p>
-    <a href="/userhome/update/{{identity.id}}" class="btn btn-success d-grid">YOUR PROFILE</a>
+<br>
+<div class="container">
+    <div>
+        <img src="https://cdn1.iconfinder.com/data/icons/vehicles-and-travel-1/32/Vehicles_and_Transport_public_transport_taxi_car_cab-1024.png"
+            style="width:40%;height:70vh;position: absolute;top:30%">
+    </div>
+    <div style="position: absolute;top:20%">
+        <p class="text-center" style="font-family:Gabriola;color:rgba(200, 28, 9, 0.836);font-size:50px;">WELCOME
+            <b>{{identity.name}}
+    </div>
+
+
+    <div>
+        <a href="" class="btn "
+            style="background-color:rgb(137, 130, 7);position:absolute;right:20%;top:60%;width:20%;color:aliceblue">BOOKING HISTORY</a>
+    </div>
+
+
+    <div>
+        <a href="/userhome/update/{{identity.id}}" class="btn "
+            style="background-color:rgb(112, 72, 72);position:absolute;right:20%;top:40%;width:20%;color:aliceblue">YOUR PROFILE</a>
+    </div>
+    <br><br>
+    <div>
+        <a href="/cabview" class="btn "
+            style="background-color:rgb(7, 137, 117);position:absolute;right:20%;top:50%;width:20%;color:aliceblue">BOOK CAB</a>
+    </div>
+
+
     {{!-- <table class="table table-striped mt-4">
 
 
@@ -25,19 +49,4 @@
         {{/each}}
     </table> --}}
 
-</div>
-
-<div class="col-sm-4 offset-sm-1" style="margin-top: 10%;">
-    <form action="" method="post" name="loginform">
-        <input type="date" class="form-control" placeholder="Date" name="date"><br>
-
-        <input type="text" class="form-control" placeholder="Start place" name="start">
-
-        <input type="text" class="form-control mt-4" placeholder="Your Destination" name="des">
-
-        <div class="d-grid mt-4">
-            <button type="submit" class="btn" style="background-color: rgb(5, 110, 149);">Search FLIGHT</button></a>
-
-        </div>
-    </form>
 </div>

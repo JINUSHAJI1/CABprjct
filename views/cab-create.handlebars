@@ -1,5 +1,14 @@
+<style>
+    .form-control{
+  width:50%
+    }
+    .form-select{
+  width:50%
+
+    }
+</style>
 <div class="container">
-    <h1 class="text-center">Driver Registration</h1>
+    <h1 class="text-center">CAB Registration</h1>
     <div>
         <div>
             <form method="post">
@@ -70,8 +79,20 @@
                         style="border-color:rgb(44, 156, 204); ;">
                 </div>
 
+                <div>
+                    <label for="myear"><h6>Communication Preference</h6></label><br>
+                    <td ><input  type="checkbox" id="call" value ="call" name="com"/>Call
+                <input   type="checkbox" id="sms" value ="sms" name="com"/>SMS
+            </td>
+                </div>
+
+                 <td>
+               <br><br> <input type="checkbox" />I agree to the <a href="">Terms and Conditions </a>of the web site.
+                
+            </td>
+
                 <div class="d-grid mt-4">
-                    <button class="btn" style="background-color:rgb(19, 116, 155);">Save</button>
+                    <button class="btn" style="background-color:rgb(19, 116, 155);width:50%;">Save</button>
                 </div>
             </form>
         </div>

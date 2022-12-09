@@ -1,35 +1,39 @@
+
+<div style="position:absolute;top:20%">
+    <img src="https://cdn4.iconfinder.com/data/icons/map-pins-2/256/26-128.png" style="width: 300%;">
+</div>
 <div class="container">
     <h1 class="text-center">Book Your CAB</h1>
-    <h2 class="text-left" style="font-family: Gabriola;">CAB : {{cab.dataValues.id}}</h2>
+    {{!-- <h2 class="text-left" style="font-family: Gabriola;">CAB : {{cab.dataValues.id}}</h2> --}}
     <div>
-        <form method="post">
+        <form method="post" style="padding:20px ;width:80%;position:absolute;right:-15%">
 
             <div class="col">
-                    <input type="hidden" name="cid" id="cabnumber" value="{{cab.dataValues.id}}" class="form-control"
+                    <input type="hidden" name="CabId" id="cabnumber" value="{{cab.dataValues.id}}" class="form-control"
                         style="border-color:rgb(44, 156, 204) ;width:60%;">
                 </div>
 <div class="row">
 
                 <div class="col">
                     <label for="cabnumber">CAB</label>
-                    <input type="text" name="cabnumber" id="cabnumber" value="{{cab.dataValues.cabnumber}}" class="form-control"
-                        style="border-color:rgb(44, 156, 204) ;width:60%;">
+                    <input type="text" name="cabnumber" id="cabnumber" readonly value="{{cab.dataValues.cabnumber}}" class="form-control"
+                        style="border-color:rgb(44, 156, 204) ;width:29%;">
                 </div>
             <div class="row">
                 <div class="col">
                     <label for="start">Source</label>
-                    <select class="form-select" name="pid" style="border-color:rgb(44, 156, 204) ;width:60%;">
+                    <select class="form-select" name="start" style="border-color:rgb(44, 156, 204) ;width:60%;">
                         <option></option>
                         {{#each data}}
-                        <option value="{{this.dataValues.id}}">{{this.dataValues.start}}</option>
+                        <option value="{{this.dataValues.start}}">{{this.dataValues.start}}</option>
                         {{/each}}
                     </select>
                 </div>
                 <div class="col"><label for="end">Destination</label>
-                    <select class="form-select" name="" style="border-color:rgb(44, 156, 204) ;width:60%;">
+                    <select class="form-select" name="end" style="border-color:rgb(44, 156, 204) ;width:60%;">
                         <option></option>
                         {{#each data}}
-                        <option value="{{this.dataValues.id}}">{{this.dataValues.end}}</option>
+                        <option value="{{this.dataValues.end}}">{{this.dataValues.end}}</option>
                         {{/each}}
                     </select>
                 </div>
@@ -79,15 +83,18 @@
             </div>
 
 
-            <div>
-                <label for="passengersno">Number of passengers</label>
+            <div class="row">
+                <div class="col">
+                    <label for="passengersno">Number of passengers</label>
                 <input type="number" name="passengersno" id="passengersno" class="form-control"
-                    style="border-color:rgb(44, 156, 204);width:29%;">
-            </div>
-             <td>
-            <input type="submit" value="Book Now" class="btn"
-                style="background-color: rgba(24, 79, 111, 0.837);">
-        </td>
+                    style="border-color:rgb(44, 156, 204);width:60%;"></div>
+                    <div class="col">
+<br><input type="submit" value="Book Now" class="btn"
+                style="background-color: rgba(24, 79, 111, 0.837);width:60%;">
+                    </div>
+                </div>
+               
+           
         </form>
     </div>
 </div>

@@ -2,27 +2,12 @@ const sequelize = require('./db');
 const {DataTypes} = require('sequelize');
 
 const Booking = sequelize.define('Booking',{
-    bid: {
+    id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true
     },
     
-    // fid: {
-        
-    // },
-    pid: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    uid: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
-    cid: {
-        type: DataTypes.INTEGER,
-        allowNull: false,
-    },
     date: {
         type: DataTypes.DATEONLY,
         allowNull: false,
@@ -30,6 +15,14 @@ const Booking = sequelize.define('Booking',{
     time: {
         type: DataTypes.TIME,
         allowNull: false,
+    },
+    start: {
+        type: DataTypes.STRING(50),
+        allowNull:false
+    },
+    end: {
+        type: DataTypes.STRING(50),
+        allowNull: false
     },
     paddress:{
         type: DataTypes.STRING(300),
@@ -50,6 +43,22 @@ const Booking = sequelize.define('Booking',{
     passengersno:{
         type:DataTypes.INTEGER,
         allowNull: false,
+    },
+    rate: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    user_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    cab_id: {
+        type: DataTypes.INTEGER,
+        allowNull: false
+    },
+    cabnumber:{
+        type: DataTypes.STRING(50),
+        allowNull: false
     }
 });
 

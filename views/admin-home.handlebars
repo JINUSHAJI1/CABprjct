@@ -1,3 +1,4 @@
+
 <style>
 body {
   font-family: "Lato", sans-serif;
@@ -76,36 +77,22 @@ body {
   <a href="/admin/cab">CAB Deatails</a>
   <a href="/admin/user">USER Details</a>
   <a href="/admin/booking">BOOKING Details</a>
-
+  <a href="/logout">Logout</a>
+  {{!-- <button class="dropdown-btn">Dropdown 
+    <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-container">
+    <a href="#">Link 1</a>
+    <a href="#">Link 2</a>
+    <a href="#">Link 3</a>
+  </div> --}}
  
 </div>
 
-
-<h1 class="text-center">Drivers</h1>
-<div class="container">
-    <table class="table table-striped mt-4" style="width: 80%;">
-        <tr>
-            <th>Driver Name</th>
-            <th>Driver Contact Number</th>
-            <th>Driver Email</th>
-            <th>Driver Licence Number</th>
-            <th>Vehicle Number</th>
-            <th>Cab Model</th>
-            <th>Year</th>
-            <th>Cab Capacity</th>
-        </tr>
-        {{#each data}}
-        <tr>
-            <td>{{this.dataValues.drivername}}</td>
-            <td>{{this.dataValues.drivercontact}}</td>
-            <td>{{this.dataValues.driveremail}}</td>
-            <td>{{this.dataValues.licencenumber}}</td>
-            <td>{{this.dataValues.cabnumber}}</td>
-            <td>{{this.dataValues.cabmodel}}</td>
-            <td>{{this.dataValues.myear}}</td>
-            <td>{{this.dataValues.cabcapacity}}</td>
-
-        </tr>
-        {{/each}}
-    </table>
+<div class="main">
+ <img src="https://thumbs.dreamstime.com/b/woman-man-great-dashboard-website-admin-visualization-chart-statistic-data-diagram-isometric-d-modern-flat-style-vector-187268738.jpg" style="width:100%; background-size:cover; margin-left: -210px;">
 </div>
+<div style="position: absolute;top:30%;right:70%;font-family:Gabriola;color:rgba(255, 162, 0, 0.785);">
+    <h1>Website Administrator</h1>
+</div>
+
